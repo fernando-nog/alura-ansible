@@ -15,4 +15,8 @@
           - php5-mysql
         state: latest
       become: yes
-
+    - name: 'Cria o banco MySqlDB'
+      mysql_db:
+        name: wordpress_db
+        login_user: root
+        state: present
